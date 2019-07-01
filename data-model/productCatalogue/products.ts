@@ -1,7 +1,7 @@
 import {
   Asset,
   AssetDraft,
-  BaseMoney,
+  BaseMoneyTypes,
   CreatedBy,
   DateTime,
   IETFLanguageTag,
@@ -55,7 +55,7 @@ export interface Image {
 
 export interface Price {
   id: string;
-  value: BaseMoney;
+  value: BaseMoneyTypes;
   country?: string;
   customerGroup?: Reference<"customer-group">;
   channel?: Reference<"channel">;
@@ -69,7 +69,7 @@ export interface Price {
 // price draft
 
 interface PriceDraft {
-  value: BaseMoney;
+  value: BaseMoneyTypes;
   country?: string;
   customerGroup?: Reference<"customer-group">;
   channel?: ResourceIdentifier<"channel">;
@@ -84,7 +84,7 @@ interface PriceDraft {
 
 interface PriceTier {
   minimumQuantity: number;
-  value: BaseMoney;
+  value: BaseMoneyTypes;
 }
 
 // product
@@ -191,8 +191,8 @@ export interface ProductVariantDraft {
 
 export interface ScopedPrice {
   id: string;
-  value: BaseMoney;
-  currentValue: BaseMoney;
+  value: BaseMoneyTypes;
+  currentValue: BaseMoneyTypes;
   country?: string;
   customerGroup?: Reference<"customer-group">;
   channel?: Reference<"channel">;

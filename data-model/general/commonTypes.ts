@@ -43,6 +43,10 @@ export interface BaseMoney {
   type: "centPrecision" | "highPrecision";
 }
 
+/** this type is not defined by CommerceTools but is what is meant in practice
+ * when other types refer to BaseMoney */
+export type BaseMoneyTypes = Money | HighPrecisionMoney;
+
 // created by
 
 export interface CreatedBy {
