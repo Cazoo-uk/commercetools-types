@@ -1,0 +1,27 @@
+*.iml
+**/.DS_Store
+
+# Terraform
+**/.terraform/
+**/*.tfstate*
+
+# Editor
+*.swp
+.vscode
+.idea
+
+# package directories
+node_modules
+jspm_packages
+yarn-error.log
+**/package-lock*
+
+# Serverless directories
+.serverless
+
+# Webpack directories
+.webpack
+*.orig
+
+# custom
+memory-profile.log
