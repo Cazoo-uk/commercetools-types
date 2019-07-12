@@ -68,7 +68,7 @@ export interface Price {
 
 // price draft
 
-interface PriceDraft {
+export interface PriceDraft {
   value: BaseMoneyTypes;
   country?: string;
   customerGroup?: Reference<"customer-group">;
