@@ -281,6 +281,13 @@ interface SetAttributeInAllVariantsAction<T = any> {
   staged?: boolean;
 }
 
+interface SetPricesAction {
+  action: "setPrices";
+  variantId: IdOrSku;
+  prices: PriceDraft[];
+  staged?: boolean;
+}
+
 export type UpdateAction<T = any> =
   | SetKeyAction
   | ChangeNameAction
@@ -289,4 +296,5 @@ export type UpdateAction<T = any> =
   | RemoveProductVariantAction
   | ChangeMasterVariantAction
   | SetAttributeAction<T>
-  | SetAttributeInAllVariantsAction<T>;
+  | SetAttributeInAllVariantsAction<T>
+  | SetPricesAction;
