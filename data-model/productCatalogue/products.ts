@@ -288,6 +288,16 @@ interface SetPricesAction {
   staged?: boolean;
 }
 
+export enum PublishScope {
+  All = "All",
+  Prices = "Prices"
+}
+
+interface PublishAction {
+  action: "publish";
+  scope: PublishScope;
+}
+
 export type UpdateAction<T = any> =
   | SetKeyAction
   | ChangeNameAction
@@ -297,4 +307,5 @@ export type UpdateAction<T = any> =
   | ChangeMasterVariantAction
   | SetAttributeAction<T>
   | SetAttributeInAllVariantsAction<T>
-  | SetPricesAction;
+  | SetPricesAction
+  | PublishAction;
