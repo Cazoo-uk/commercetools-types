@@ -10,7 +10,7 @@ export interface Asset {
   name: LocalizedString;
   description?: LocalizedString;
   tags?: string[];
-  custom: CustomFields;
+  custom?: CustomFields;
 }
 
 // asset draft
@@ -20,9 +20,9 @@ export interface AssetDraft {
   /** requires at least one entry! */
   sources: AssetSource[];
   name: LocalizedString;
-  description: LocalizedString;
+  description?: LocalizedString;
   tags?: string[];
-  custom: CustomFieldsDraft;
+  custom?: CustomFieldsDraft;
 }
 
 // asset source
