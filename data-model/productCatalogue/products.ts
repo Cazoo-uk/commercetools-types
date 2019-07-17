@@ -288,14 +288,9 @@ interface SetPricesAction {
   staged?: boolean;
 }
 
-export enum PublishScope {
-  All = "All",
-  Prices = "Prices"
-}
-
 interface PublishAction {
   action: "publish";
-  scope: PublishScope;
+  scope: "All" | "Prices";
 }
 
 export type UpdateAction<T = any> =
