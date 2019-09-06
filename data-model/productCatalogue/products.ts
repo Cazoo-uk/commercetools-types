@@ -243,6 +243,11 @@ interface ChangeSlugAction {
   staged?: boolean;
 }
 
+interface SetTaxCategoryAction {
+  action: "setTaxCategory";
+  taxCategory?: ResourceIdentifier<"tax-category">;
+}
+
 interface AddProductVariantAction {
   action: "addVariant";
   sku?: string;
@@ -303,4 +308,5 @@ export type UpdateAction<T = any> =
   | SetAttributeAction<T>
   | SetAttributeInAllVariantsAction<T>
   | SetPricesAction
-  | PublishAction;
+  | PublishAction
+  | SetTaxCategoryAction;
