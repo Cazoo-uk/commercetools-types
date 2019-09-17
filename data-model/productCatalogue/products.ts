@@ -248,6 +248,12 @@ interface SetTaxCategoryAction {
   taxCategory?: ResourceIdentifier<"tax-category">;
 }
 
+interface TransitionStateAction {
+  action: "transitionState";
+  state?: Reference<"state">;
+  force?: boolean;
+}
+
 interface AddProductVariantAction {
   action: "addVariant";
   sku?: string;
@@ -309,4 +315,5 @@ export type UpdateAction<T = any> =
   | SetAttributeInAllVariantsAction<T>
   | SetPricesAction
   | PublishAction
-  | SetTaxCategoryAction;
+  | SetTaxCategoryAction
+  | TransitionStateAction;
