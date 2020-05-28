@@ -8,7 +8,7 @@ This repo will likely not be updated.
 
 ## Useage
 
-Reference this repo in your `dependencies` section of your project's`package.json`:
+Reference this repo in your `dependencies` section of your project's `package.json`:
 
 ```typescript
 "dependencies": {
